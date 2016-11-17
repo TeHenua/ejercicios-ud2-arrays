@@ -12,7 +12,7 @@ public class Main {
 
         for (int i = 0; i < lista.length; i++) {
             System.out.println("Escribe el nombre y apellidos");
-            lista[i] = br.readLine().toUpperCase();
+            lista[i] = br.readLine();
         }
 
         String busqueda;
@@ -30,7 +30,7 @@ public class Main {
 
     public static void buscar(String[] lista, char b){
         for (int i = 0; i <lista.length ; i++) {
-            if(lista[i].charAt(0) == b){
+            if(lista[i].toUpperCase().charAt(0) == b ){
                 System.out.println(lista[i]);
             }
         }
