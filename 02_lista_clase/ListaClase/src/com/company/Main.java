@@ -15,21 +15,25 @@ public class Main {
             lista[i] = br.readLine().toUpperCase();
         }
 
-        String b;
+        String busqueda;
         do{
             System.out.println("Escribe la primera letra para buscar o FIN");
-            b = br.readLine().toUpperCase();
-            if(b.equals("FIN")){
+            busqueda = br.readLine().toUpperCase();
+            if(busqueda.equals("FIN")){
                 System.out.println("AGUR");
             }else{
-                System.out.println(buscar(lista));
+                char b = busqueda.charAt(0);
+                buscar(lista,b);
             }
-        }while (!b.equals("FIN"));
+        }while (!busqueda.equals("FIN"));
 
     }
 
-    public static String buscar(String[] lista){
-
-        return "";
+    public static void buscar(String[] lista, char b){
+        for (int i = 0; i <lista.length ; i++) {
+            if(lista[i].charAt(0) == b){
+                System.out.println(lista[i]);
+            }
+        }
     }
 }
