@@ -22,8 +22,7 @@ public class Main {
             if(busqueda.equals("FIN")){
                 System.out.println("AGUR");
             }else{
-                char b = busqueda.charAt(0);
-                buscar(lista,b);
+                buscar(lista,busqueda.charAt(0));
             }
         }while (!busqueda.equals("FIN"));
 
