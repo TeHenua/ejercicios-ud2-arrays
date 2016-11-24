@@ -10,14 +10,19 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Escribe un valor");
-        int[][][] matriz = new int[3][3][3];
+        int[][] matriz = new int[3][3];
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                for (int k = 0; k < 3; k++) {
-                    matriz[i][j][k] = Integer.parseInt(br.readLine());
-                }
+                matriz[i][j] = Integer.parseInt(br.readLine());
             }
         }
-        System.out.format("",)
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.format("%5d ", matriz[i][j]);
+            }
+            System.out.println();
+        }
+
     }
 }
